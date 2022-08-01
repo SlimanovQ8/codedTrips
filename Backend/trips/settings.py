@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-xdp4lja6@k^kl%8fjl(uhstv5ld$ph0wic+2a1cydv_2$kh@37
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.0.2.2']
+ALLOWED_HOSTS = ['10.0.2.2', '127.0.0.1']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'coded_trips',
+
 ]
 
 REST_FRAMEWORK = {
@@ -48,7 +49,8 @@ REST_FRAMEWORK = {
 
     ),
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.AllowAny',
+
     ],
 }
 

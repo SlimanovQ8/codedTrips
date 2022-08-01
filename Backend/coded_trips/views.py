@@ -10,4 +10,4 @@ class UserCreateAPIView(generics.CreateAPIView):
     serializer_class = UserCreateSerializer
 
 def hi_django(request):
-    return HttpResponse("mla golazo del merenque")
+    return HttpResponse("mla golazo dhbrtyujfhel merenque")
